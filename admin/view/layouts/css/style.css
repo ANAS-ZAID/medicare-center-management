@@ -1,0 +1,511 @@
+/* ################  gloabl ##########################*/
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Cairo";
+    src: url("../fonts/Cairo-Regular.ttf");
+}
+
+body {
+    font-family: "Cairo";
+}
+
+i {
+    color: #1d3557;
+}
+
+.btn-primary {
+    --bs-btn-bg: #1d3557;
+    --bs-btn-border-color: #1d3557;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #29466e;
+    --bs-btn-hover-border-color: #29466e;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #29466e;
+    --bs-btn-active-border-color: #29466e;
+}
+
+.btn-primary:hover {
+    transform: scale(1);
+    cursor: pointer;
+    box-shadow: 0 0 10px #131832;
+    transition: 0.5;
+}
+
+/* ################  form login and form-add-user ##########################*/
+
+.login {
+    background-color: #e0e0e0;
+    box-shadow: 5px 5px 10px #1d3557;
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.login h3 {
+    color: #1d3557;
+}
+
+.login .form-group,
+.form-handilng .form-group {
+    margin: 10px 0px;
+    position: relative;
+}
+
+.login label,
+.form-handilng label {
+    font-size: 17px;
+    color: #1d3557;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-control:focus {
+    border-color: #1d3557;
+    box-shadow: 0 0 0 .25rem rgba(29, 53, 87, .25);
+}
+
+.login input,
+.form-handilng input,
+.form-handilng select,
+.form-handilng textarea {
+    color: #1d3557;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 50px;
+}
+
+.login i,
+.form-handilng i {
+
+    position: absolute;
+    font-size: 17px;
+    color: #1d3557;
+    top: 45px;
+
+}
+
+.login i:not(.show-password),
+.form-handilng i:not(.show-password) {
+    left: 20px;
+
+}
+
+.show-password {
+    right: 20px;
+    cursor: pointer;
+}
+
+.mainBody {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.mainBody .sideBar {
+    width: 255px;
+    background-color: white;
+}
+
+@media (max-width: 991px) {
+    .mainBody .sideBar {
+        width: 50px;
+    }
+
+}
+
+.mainBody .sideBar h3 {
+    width: fit-content;
+    margin: 0px auto 30px;
+    color: #1d3557;
+    position: relative;
+    padding: 17px;
+
+}
+
+@media (max-width: 991px) {
+    .mainBody .sideBar h3 {
+        display: none;
+    }
+
+}
+
+.mainBody .sideBar h3::before,
+.mainBody .sideBar h3::after {
+    content: '';
+    position: absolute;
+    background-color: #1d3557;
+    right: 50%;
+    transform: translate(50%, 0px);
+}
+
+.mainBody .sideBar h3::before {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    bottom: -12px;
+}
+
+.mainBody .sideBar h3::after {
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+}
+
+
+
+.mainBody .sideBar ul {
+    list-style: none;
+    padding: 0 30px;
+}
+
+@media (max-width: 991px) {
+    .mainBody .sideBar ul {
+        padding: 5px;
+        margin: 50px 0;
+    }
+
+}
+
+.mainBody .sideBar ul li a {
+    text-decoration: none;
+    padding: 10px;
+    padding-left: 12px;
+    font-size: 17px;
+    margin: 0 0 10px;
+    color: #333;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+
+@media (max-width: 991px) {
+    .mainBody .sideBar ul li a span {
+        display: none;
+    }
+
+    .mainBody .sideBar ul li .activeLine {
+        height: 25px;
+        top: 6px;
+    }
+
+}
+
+
+.mainBody .sideBar ul li a.active,
+.mainBody .sideBar ul li a:hover {
+    background-color: #eee;
+    font-weight: bold;
+}
+.mainBody .sideBar ul li a.active::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 5px;
+    height: 24px;
+    border-radius: 30%;
+    left:3px;
+    top: 10px;
+    background-color: #131832;
+}
+
+.mainBody .sideBar ul li a .icon-group {
+    position: relative;
+    display: inline-block;
+    bottom: 14px;
+    right: 7px;
+}
+
+.mainBody .sideBar ul li a .icon-group i {
+    position: absolute;
+
+}
+
+.mainBody .sideBar ul li a .icon-group .icon1 {
+    left: 4px;
+    font-size: 12px;
+    top: 0px;
+    /* Color customization */
+}
+
+.mainBody .sideBar ul li a .icon-group .icon2 {
+    left: 10px;
+    /* Color customization */
+}
+
+.mainBody .sideBar ul li a .icon-group .icon3 {
+    left: 20px;
+    font-size: 12px;
+    top: 0px;
+    /* Color customization */
+}
+
+.mainBody .sideBar ul li a .span-group {
+    margin-left: 22px;
+}
+
+.mainBody .mainContent {
+
+    flex: 1;
+    background-color: #eee;
+    /* padding: 10px; */
+
+}
+
+.mainBody .mainContent .topBar {
+
+
+    background-color: white;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.topBar .dropdown-menu {
+    width: 300px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.topBar .dropdown-menu p {
+    margin: 0;
+    text-align: center;
+}
+
+.topBar .dropdown-menu img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+}
+
+.topBar .dropdown-menu div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.topBar .dropdown-menu a {
+    text-decoration: none;
+    background-color: #eee;
+    text-align: center;
+    color: #333;
+    border-radius: 10px;
+    width: 49%;
+}
+
+.mainBody .mainContent .navbar-brand {
+    color: #1d3557;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.mainBody .mainContent .action i {
+
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.mainBody .mainContent .content {
+
+    width: 100%;
+    padding: 5px;
+}
+/* .mainBody .mainContent .contentBody {
+
+    width: 50%;
+    padding: 5px;
+} */
+
+a.nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d3557;
+    color: #eee;
+}
+
+a.nav-link i {
+    color: #eee;
+}
+
+a.nav-link:hover {
+    color: #eee;
+}
+
+.form-handilng {
+    background-color: white;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.form-handilng textarea {
+    resize: none;
+    height: 150px;
+    padding: 10px 10px;
+}
+
+.form-handilng input[type="number"] {
+    padding: 10px 10px;
+}
+
+.card {
+    border: none;
+    margin: 10px;
+    color: #1b3355;
+    box-shadow: 10px 10px 10px #1b3355;
+    border-radius: 10px;
+}
+
+.card .card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.card .card-head a {
+    font-size: 17px;
+    /* color: #eee ; */
+}
+
+.card .card-body {
+    padding: 10px;
+    text-align: center;
+}
+
+.card .card-body p {
+    margin: 0;
+
+}
+
+.card img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+.card .card-footer,
+.card .createdAt,
+.card .card-footer-account-mony {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 2px solid #888;
+    background-color: white;
+    padding: 10px 0;
+}
+
+.card .card-footer a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    width: 30%;
+    text-align: center;
+    background-color: #d43838;
+    /* border-radius:8px ; */
+    color: white;
+
+}
+
+.card .card-footer a.active {
+    background-color: green;
+}
+
+.card .createdAt {
+    color: #888;
+    font-size: 17px;
+}
+/* .card-dashPordScereens{
+    color: #1b3355;
+    box-shadow: 10px 10px 10px #1b3355;
+    border-radius: 10px;
+} */
+.card-dashPordScereens:hover{
+    transform: scale(1);
+    cursor: pointer;
+    box-shadow: 0 0 10px #1b3355;
+    transition: 0.5;
+}
+.card-dashPordScereens .card-head> i{
+    font-size: 25px;
+}
+.card-dashPordScereens .card-head>h4{
+ margin-top: 4px;
+font-size: 22px;
+
+}
+.card-dashPordScereens .card-body {
+    display: flex;
+    justify-content: space-between;
+}
+.a-card{
+    text-decoration: none;
+ }
+table{
+    width: 97%; 
+    padding: 0 20px;
+    background-color: #1D3557;
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 26px;
+     box-shadow: 0px 0px 10px #1d3557;
+}
+
+table thead th {
+    /* border-right: 0px solid #eee; */
+    padding: 6px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #eee;
+
+}
+
+table tbody {
+   
+    background-color: #eee;
+}
+
+table td {
+    border: 0px solid #1d3557;
+    color: #1D3557;
+    padding: 4px;
+    font-size: 18px;
+}
+
+
+/************ Panel Users ************/
+.panel .panel-body.users div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.panel .panel-body.users div:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+.panel .panel-body.users div:nth-child(odd) {
+    background-color: #fff;
+}
+
+.panel .panel-body.users div span {
+    color: #333;
+    font-weight: bold;
+    font-size: 17px;
+}
+

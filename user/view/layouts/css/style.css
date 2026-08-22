@@ -1,0 +1,329 @@
+
+/************ Global ************/
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Cairo';
+    src: url('../fonts/Cairo-Regular.ttf');
+}
+
+body {
+    font-family: 'Cairo';
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/************ Panel ************/
+.panel {
+    border: 1px solid #fff;
+    border: 1px solid #eee;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.panel .panel-head {
+    background-color: #eee;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.panel .panel-head span {
+    color: #333;
+    font-weight: bold;
+}
+
+.panel .panel-head i {
+    cursor: pointer;
+}
+
+.panel .panel-body {
+    padding: 10px;
+}
+
+/************ Navbar ************/
+.navbar .navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #333;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    color: #333;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+@media (min-width: 992px) {
+    .navbar .navbar-nav .nav-item .nav-link:not(:last-of-type) {
+        margin-right: 5px;
+    }
+}
+
+/************ Landing ************/
+.landing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: calc(100vh - 57.5px);
+}
+
+.landing h1 {
+    font-weight: bold;
+    margin: 0;
+}
+
+.landing p {
+    line-height: 2;
+    font-size: 17px;
+    color: #888;
+    margin: 15px 0;
+}
+
+/************ Section ************/
+section {
+    padding: 50px 0;
+}
+
+section > h2 {
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+section > p {
+    text-align: center;
+    font-size: 17px;
+    color: #888;
+    margin: 10px 0 30px;
+}
+
+/************ Categories ************/
+.categories .category {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.categories .category i {
+    font-size: 40px;
+    color: #888;
+}
+
+.categories .category a {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.categories .category span {
+    color: #888;
+    line-height: 1.8;
+}
+
+/************ Products ************/
+.products .product {
+    box-shadow: 0 0 5px #888;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.products .product > span {
+    background-color: #eee;
+    color: #333;
+    padding: 0 3px;
+    position: absolute;
+    border-radius: 3px;
+    top: 5px;
+    
+}
+
+.products .product .price {
+    right: 5px;
+}
+
+.products .product .category {
+    left: 5px;
+}
+
+.products .product img {
+    width: 100%;
+}
+
+.products .product div {
+    padding: 10px;
+}
+
+.products .product div a {
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.products .product div span {
+    color: #888;
+    font-size: 16px;
+}
+
+/************ Header Section ************/
+.header-section {
+    background-color: #eee;
+    color: #333;
+    padding: 50px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+/************ Footer ************/
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    color: #333;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+footer span {
+    font-size: 17px;
+    color: #888;
+}
+
+/************ Auth ************/
+.auth {
+    max-width: 400px;
+    margin: auto;
+}
+
+.auth h3 {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+}
+
+.auth h5 {
+    text-align: center;
+    color: #888;
+    margin: 5px 0 15px;
+}
+
+.auth .form-group {
+    margin-bottom: 15px;
+}
+
+.auth label {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 17px;
+    color: #333;
+    font-weight: bold;
+}
+
+.auth input.form-control {
+    background-color: transparent;
+    padding: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #333;
+}
+
+.auth button {
+    width: 100%;
+    display: block;
+}
+
+.auth a {
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+    color: #888;
+}
+
+/************ Profile ************/
+.profile section > a {
+    display: block;
+    margin: 15px auto 0;
+    width: 150px;
+}
+
+.profile .head {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+.profile .head img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.profile .head p {
+    margin: 15px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.profile .head span {
+    font-size: 17px;
+    color: #888;
+    display: block;
+    margin: 5px 0 20px;
+}
+
+.profile .head div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.profile .panel .panel-body {
+    display: none;
+}
+
+.profile .panel .panel-body .info span {
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.profile .panel .panel-body .info span:nth-child(odd) {
+    color: #333;
+    padding: 5px 0 3px;
+}
+
+.profile .panel .panel-body .info span:nth-child(even) {
+    color: #888;
+    border-bottom: 1px solid #ccc;
+    padding: 0 0 5px;
+}
